@@ -4,3 +4,8 @@ These keywords can help you run this project on developed environment:
 - MailKit extension (NuGet Packages)
 - .NET Core Web App MVC
 - DbContext (handle data from models)
+- Run with Visual Studio
+- SQL Server (Management Studio)
+- Connection String to database
+- Bootstrap classnames on View
+- (class Interface)
