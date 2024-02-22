@@ -49,10 +49,11 @@ namespace WebApp01.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                AppUserModel newUser = new AppUserModel { UserName = user.Username, Email = user.Email };
-                IdentityResult result = await _userManager.CreateAsync(newUser, user.Password);
+                AppUserModel newAdm = new AppUserModel { UserName = user.Username, Email = user.Email };
+                IdentityResult result = await _userManager.CreateAsync(newAdm, user.Password);
                 if (result.Succeeded)
                 {
+                    IdentityResult admrole = await _userManager.AddToRoleAsync(newAdm, "Admin");
                     TempData["success"] = "Tạo tài khoản thành công";
                     return Redirect("/account/login");
                 }

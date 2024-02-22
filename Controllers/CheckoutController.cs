@@ -45,10 +45,10 @@ namespace WebApp01.Controllers
             }
         }
 
-        public IActionResult PassDataToMail(CheckoutModel checkout)
-        {
-            TempData["mailContent"] = checkout.Address.ToString();
-            return RedirectToAction("Contact", "Mail");
-        }
+        // public IActionResult PassDataToMail(CheckoutModel checkout)
+        // {
+        //     TempData["mailContent"] = checkout.Address.ToString();
+        //     return RedirectToAction("Contact", "Mail");
+        // }
     }
 }

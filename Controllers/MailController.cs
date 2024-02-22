@@ -64,9 +64,9 @@ namespace WebApp01.Controllers
                 using (var client = new SmtpClient())
                 {
                     client.Connect("smtp.gmail.com");
-                    client.Authenticate("DienGmailCuaBan@gmail.com", "DienMatKhauUngDungCuaBan"); // Vui long dung thong tin hop mail cua ban (li do bao mat)
+                    client.Authenticate("YourMailServerAddress", "YourAppPasswordHere"); // Vui long dung thong tin hop mail cua ban (li do bao mat)
                     var mailContent = TempData["mailContent"];
-                    ViewBag.Mail = mailContent;
+                    // ViewBag.Mail = mailContent;
                     var bodyBuilder = new BodyBuilder
                     {
                        
